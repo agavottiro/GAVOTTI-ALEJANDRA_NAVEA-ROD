@@ -1,0 +1,91 @@
+@import url("./globalStyles.css");
+
+body {
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+header {
+  background-color: black;
+  padding: 35px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  color: bisque;
+  font-size: 50px;
+}
+
+.registro {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  display: block;
+  align-items: center;
+  color: #c3c493;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+form div {
+  padding: 5px;
+}
+
+form div input {
+  border-radius: 100vh;
+  margin-bottom: 1rem;
+  padding: 0.3rem 1rem;
+  border: 2px solid var(--app-grey);
+}
+
+form div label {
+  font-weight: 600;
+}
+
+p {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h2 {
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: cornsilk;
+  color: white;
+  padding: 15px;
+  border-radius: 3rem;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+button:hover {
+  background-color: peru;
+  cursor: pointer;
+}
+
+.volver {
+  margin-left: 40px;
+  position: absolute;
+  bottom: 0;
+}
