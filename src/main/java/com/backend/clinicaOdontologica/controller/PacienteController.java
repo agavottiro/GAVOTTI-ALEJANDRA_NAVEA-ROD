@@ -1,13 +1,10 @@
 package com.backend.clinicaOdontologica.controller;
 
 import com.backend.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
-import com.backend.clinicaOdontologica.dto.modificacion.OdontologoModificacionEntradaDto;
 import com.backend.clinicaOdontologica.dto.modificacion.PacienteModificacionEntradaDto;
-import com.backend.clinicaOdontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.backend.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.backend.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaOdontologica.service.IPacienteService;
-import com.backend.clinicaOdontologica.service.impl.PacienteService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

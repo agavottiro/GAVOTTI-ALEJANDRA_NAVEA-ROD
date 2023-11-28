@@ -1,12 +1,9 @@
 package com.backend.clinicaOdontologica.service.impl;
 
 import com.backend.clinicaOdontologica.dto.entrada.odontologo.OdontologoEntradaDto;
-import com.backend.clinicaOdontologica.dto.entrada.paciente.PacienteEntradaDto;
 import com.backend.clinicaOdontologica.dto.modificacion.OdontologoModificacionEntradaDto;
 import com.backend.clinicaOdontologica.dto.salida.odontologo.OdontologoSalidaDto;
-import com.backend.clinicaOdontologica.dto.salida.paciente.PacienteSalidaDto;
 import com.backend.clinicaOdontologica.entity.Odontologo;
-import com.backend.clinicaOdontologica.entity.Paciente;
 import com.backend.clinicaOdontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaOdontologica.repository.OdontologoRepository;
 import com.backend.clinicaOdontologica.service.IOdontologoService;
@@ -16,7 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import javax.sound.sampled.AudioFormat;
 import java.util.List;
 
 @Service

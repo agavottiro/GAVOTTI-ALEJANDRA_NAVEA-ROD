@@ -18,12 +18,10 @@ window.addEventListener("load", function () {
       apellido: apellido.value,
       dni: dni.value,
       fechaAlta: fechaAlta.value,
-      domicilioEntradaDto: {
-        calle: calle.value,
-        numero: numero.value,
-        localidad: localidad.value,
-        provincia: provincia.value,
-      },
+      calle: calle.value,
+      numero: numero.value,
+      localidad: localidad.value,
+      provincia: provincia.value,
     };
 
     const settings = {
