@@ -1,14 +1,14 @@
 window.addEventListener("load", function () {
   const form = document.forms[0];
   const nombre = document.querySelector("#inputName");
-  const apellido = document.querySelector("#inputLasName");
+  const apellido = document.querySelector("#inputLastName");
   const dni = document.querySelector("#inputDni");
   const fechaAlta = document.querySelector("#inputDate");
   const calle = document.querySelector("#inputCalle");
   const numero = document.querySelector("#inputNumero");
   const localidad = document.querySelector("#inputLocalidad");
   const provincia = document.querySelector("#inputProvincia");
-  const url = "https://localhost:8081";
+  const url = "http://localhost:8081";
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -18,10 +18,12 @@ window.addEventListener("load", function () {
       apellido: apellido.value,
       dni: dni.value,
       fechaAlta: fechaAlta.value,
-      calle: calle.value,
-      numero: numero.value,
-      localidad: localidad.value,
-      provincia: provincia.value,
+      domicilioEntradaDto: {
+        calle: calle.value,
+        numero: numero.value,
+        localidad: localidad.value,
+        provincia: provincia.value,
+      },
     };
 
     const settings = {
@@ -37,7 +39,7 @@ window.addEventListener("load", function () {
     form.reset();
   });
 
-  function realizarRegistro(settings) {
+  function registrarPaciente(settings) {
     console.log("Lanzando consulta a la API...");
     fetch(`${url}/pacientes/registrar`, settings)
       .then((response) => {
@@ -65,42 +67,4 @@ window.addEventListener("load", function () {
         console.log(error);
       });
   }
-
-  // script.js
-
-  // document.addEventListener('DOMContentLoaded', function () {
-  //     // Llama a la función para obtener datos del backend y mostrarlos en la página
-  //     fetchDataAndRender();
-  // });
-
-  // async function fetchDataAndRender() {
-  //     try {
-  //         // Realiza una solicitud al backend para obtener datos de la API
-  //         const data = await fetchBackendData();
-
-  //         // Renderiza los datos en la página
-  //         renderData(data);
-  //     } catch (error) {
-  //         console.error('Error al obtener datos del backend:', error);
-  //     }
-  // }
-
-  // async function fetchBackendData() {
-  //     // Realiza una solicitud al backend que, a su vez, se comunica con la API
-  //     const response = await fetch('http://localhost:3000/api/data'); // Ajusta la ruta según tu configuración
-  //     const data = await response.json();
-  //     return data;
-  // }
-
-  // function renderData(data) {
-  //     // Modifica el DOM para mostrar los datos en la página
-  //     const resultContainer = document.getElementById('result-container');
-  //     resultContainer.innerHTML = '';
-
-  //     data.forEach(item => {
-  //         const listItem = document.createElement('div');
-  //         listItem.textContent = item.name; // Ajusta esto según la estructura de tus datos
-  //         resultContainer.appendChild(listItem);
-  //     });
-  // }
 });
