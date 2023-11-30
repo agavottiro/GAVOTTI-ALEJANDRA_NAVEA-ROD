@@ -18,11 +18,9 @@ public class TurnoEntradaDto {
     private LocalDateTime fechaYHora;
 
     @NotNull(message = "El odontologo no puede ser nulo")
-    @Valid
     private Long odontologo;
 
     @NotNull(message = "El paciente no puede ser nulo")
-    @Valid
     private Long paciente;
 
     public TurnoEntradaDto() {
