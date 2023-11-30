@@ -1,7 +1,10 @@
 package com.backend.clinicaOdontologica.dto.modificacion;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.validation.constraints.*;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DomicilioModificacionEntradaDto {
 
     @NotNull(message = "Debe proporcionar el id del domicilio que se desea modificar")
@@ -12,7 +15,6 @@ public class DomicilioModificacionEntradaDto {
     private String calle;
 
     @NotNull(message = "El campo no puede ser nulo")
-    @NotBlank(message = "El campo no puede estar en blanco")
     @Digits(integer = 8, fraction = 0, message = "El número debe tener 8 dígitos máximo")
     private Integer numero;
 

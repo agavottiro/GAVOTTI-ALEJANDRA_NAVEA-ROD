@@ -48,7 +48,7 @@ public class TurnoServiceTest {
         pacienteEntrada = new PacienteEntradaDto("Sofia", "Mansilla", "865465S", LocalDate.of(2021, 05, 26), new Domicilio("Una calle", 98, "Una localidad", "Una provincia"));
         pacienteSalida = pacienteService.registrarPaciente(pacienteEntrada);
 
-        turno = new TurnoEntradaDto((LocalDateTime.of(2022, 6, 13, 10, 35)),odontologoSalida, pacienteSalida);
+        turno = new TurnoEntradaDto((LocalDateTime.of(2022, 6, 13, 10, 35)),odontologoSalida.getId(), pacienteSalida.getId());
 
     }
 
@@ -66,7 +66,7 @@ public class TurnoServiceTest {
 
     @Order(2)
     @Test
-    public void listarTodosLosTurnos() throws BadRequestException {
+    public void listarTodosLosTurnos() {
 
         List<TurnoSalidaDto> listaTurnos = turnoService.listarTurnos();
         assertFalse(listaTurnos.isEmpty());

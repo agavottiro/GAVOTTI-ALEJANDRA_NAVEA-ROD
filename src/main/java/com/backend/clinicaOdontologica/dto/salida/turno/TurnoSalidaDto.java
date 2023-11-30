@@ -12,18 +12,18 @@ public class TurnoSalidaDto {
 
     private LocalDateTime fechaYHora;
 
-    private OdontologoSalidaDto odontologoSalidaDto;
+    private OdontologoSalidaDto odontologoTurnoSalidaDto;
 
-    private PacienteSalidaDto pacienteSalidaDto;
+    private PacienteSalidaDto pacienteTurnoSalidaDto;
 
     public TurnoSalidaDto() {
     }
 
-    public TurnoSalidaDto(Long id, LocalDateTime fechaYHora, OdontologoSalidaDto odontologoSalidaDto, PacienteSalidaDto pacienteSalidaDto) {
+    public TurnoSalidaDto(Long id, LocalDateTime fechaYHora, OdontologoSalidaDto odontologoTurnoSalidaDto, PacienteSalidaDto pacienteTurnoSalidaDto) {
         this.id = id;
         this.fechaYHora = fechaYHora;
-        this.odontologoSalidaDto = odontologoSalidaDto;
-        this.pacienteSalidaDto = pacienteSalidaDto;
+        this.odontologoTurnoSalidaDto = odontologoTurnoSalidaDto;
+        this.pacienteTurnoSalidaDto = pacienteTurnoSalidaDto;
     }
 
     public Long getId() {
@@ -42,19 +42,19 @@ public class TurnoSalidaDto {
         this.fechaYHora = fechaYHora;
     }
 
-    public OdontologoSalidaDto getOdontologoSalidaDto() {
-        return odontologoSalidaDto;
+    public OdontologoSalidaDto getOdontologoTurnoSalidaDto() {
+        return odontologoTurnoSalidaDto;
     }
 
-    public void setOdontologoSalidaDto(OdontologoSalidaDto odontologoSalidaDto) {
-        this.odontologoSalidaDto = odontologoSalidaDto;
+    public void setOdontologoTurnoSalidaDto(OdontologoSalidaDto odontologoTurnoSalidaDto) {
+        this.odontologoTurnoSalidaDto = odontologoTurnoSalidaDto;
     }
 
-    public PacienteSalidaDto getPacienteSalidaDto() {
-        return pacienteSalidaDto;
+    public PacienteSalidaDto getPacienteTurnoSalidaDto() {
+        return pacienteTurnoSalidaDto;
     }
 
-    public void setPacienteSalidaDto(PacienteSalidaDto pacienteSalidaDto) {
-        this.pacienteSalidaDto = pacienteSalidaDto;
+    public void setPacienteTurnoSalidaDto(PacienteSalidaDto pacienteTurnoSalidaDto) {
+        this.pacienteTurnoSalidaDto = pacienteTurnoSalidaDto;
     }
 }
